@@ -1,0 +1,74 @@
+html, body{
+    background-color: #152d51;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#logo{
+    width: 8%;
+    height: auto;
+}
+
+.word{
+    font-family: 'Nexa Script', sans-serif;
+    font-size: 40px;
+    margin: auto;
+}
+
+.game_container {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+#emojis, #word {
+    text-align: center; /* Center text horizontally */
+}
+
+#word{
+    
+    display: none;
+    font-size: 80px;
+    font-family: monospace;
+    color: #f1f1f1;
+}
+
+#emojis{
+    
+    display: none;
+    font-size: 80px;
+}
+
+#hiddenImage{
+    display: block;
+    height: 80%;
+    width: auto;
+    animation-name: growAndShrink;
+    animation-duration: 3s; /* Adjust the duration as needed */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes growAndShrink {
+    0% {
+        transform: scale(1); /* Initial size */
+    }
+    50% {
+        transform: scale(1.2); /* Grow to 120% of original size */
+    }
+    100% {
+        transform: scale(1); /* Shrink back to original size */
+    }
+}
