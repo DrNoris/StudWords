@@ -75,6 +75,7 @@ function generate_word(){
 }
 
 document.addEventListener('keydown', function(event){
+    console.log(event.key);
     if(event.key === "Enter"){
         document.getElementById("emojis").innerHTML = generate_emojis();
         document.getElementById("word").innerHTML = generate_word();
@@ -84,4 +85,16 @@ document.addEventListener('keydown', function(event){
 
         document.getElementById("hiddenImage").style.display = "none";
     }
+});
+
+
+
+document.addEventListener('click', function(event) {
+        document.getElementById("emojis").innerHTML = generate_emojis();
+        document.getElementById("word").innerHTML = generate_word();
+
+        document.getElementById("emojis").style.display = "block";
+        document.getElementById("word").style.display = "block";    
+
+        document.getElementById("hiddenImage").style.display = "none";
 });
